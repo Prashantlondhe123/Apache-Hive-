@@ -87,4 +87,19 @@ It doesn't care about datatypes(storing an integer in one row and a string in an
 It doesn't enforce relationships within your data.
 It is designed to run on a cluster of computers, built using commodity hardware
 
-#
+###################### Apache Cassandra ###
+Apache Cassandra is an open source, distributed and decentralized/distributed storage system (database), for managing very large amounts of structured data spread out across the world. It provides highly available service with no single point of failure.
+
+Listed below are some of the notable points of Apache Cassandra −
+
+It is scalable, fault-tolerant, and consistent.
+
+It is a column-oriented database.Its distribution design is based on Amazon’s Dynamo and its data model on Google’s Bigtable.
+
+Created at Facebook, it differs sharply from relational database management systems.
+
+Cassandra implements a Dynamo-style replication model with no single point of failure, but adds a more powerful “column family” data model.
+
+Cassandra is being used by some of the biggest companies such as Facebook, Twitter, Cisco, Rackspace, ebay, Twitter, Netflix, and more.
+
+# features of Cassandra:
