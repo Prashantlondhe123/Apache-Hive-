@@ -1,3 +1,14 @@
+All supported data source : 
+Apache Hbase, Cassandra,mysql, delta Lake ,apache kafka ,elatic, mysql ,postgresql,mongodb, Hadoop HDFS, redis
+
+
+
+
+
+
+
+
+################################################### Apache Hive
 #Apache Hive:
 Hive is a data warehouse system which is used to analyze structured data. It is built on the top of Hadoop. It was developed by Facebook.
 Hive provides the functionality of reading, writing, and managing large datasets residing in distributed storage. It runs SQL like queries called HQL (Hive query language) which gets internally converted to MapReduce jobs.
@@ -33,5 +44,47 @@ It follows the data-flow language
 It can handle semi-structured data.
 It works on client-side of HDFS cluster.
 Pig is comparatively faster than Hive.
+
+#Hive Architecture
+The following architecture explains the flow of submission of query into Hive
+
+## Hive client:  
+ Hive allows writing applications in various languages, including Java, Python, and C++. It supports different types of clients such as:-
+1)Thrift Server - It is a cross-language service provider platform that serves the request from all those programming languages that supports Thrift.
+2)JDBC Driver - It is used to establish a connection between hive and Java applications. The JDBC Driver is present in the class org.apache.hadoop.hive.jdbc.HiveDriver.
+3)ODBC Driver - It allows the applications that support the ODBC protocol to connect to Hive.
+
+##Hive Services:
+The following are the services provided by Hive:-
+
+Hive CLI - The Hive CLI (Command Line Interface) is a shell where we can execute Hive queries and commands.
+Hive Web User Interface - The Hive Web UI is just an alternative of Hive CLI. It provides a web-based GUI for executing Hive queries and commands.
+Hive MetaStore - It is a central repository that stores all the structure information of various tables and partitions in the warehouse. It also includes metadata of column and its type information, the serializers and deserializers which is used to read and write data and the corresponding HDFS files where the data is stored.
+Hive Server - It is referred to as Apache Thrift Server. It accepts the request from different clients and provides it to Hive Driver.
+Hive Driver - It receives queries from different sources like web UI, CLI, Thrift, and JDBC/ODBC driver. It transfers the queries to the compiler.
+Hive Compiler - The purpose of the compiler is to parse the query and perform semantic analysis on the different query blocks and expressions. It converts HiveQL statements into MapReduce jobs.
+Hive Execution Engine - Optimizer generates the logical plan in the form of DAG of map-reduce tasks and HDFS tasks. In the end, the execution engine executes the incoming tasks in the order of their dependencies.
+
+############################################# Apache Hbase #####
+#Hbase:
+Hbase is an open source framework provided by Apache. It is a sorted map data built on Hadoop. It is column oriented and horizontally scalable.
+It is based on Google's Big Table.It has set of tables which keep data in key value format. Hbase is well suited for sparse data sets which are very common in big data use cases. Hbase provides APIs enabling development in practically any programming language. It is a part of the Hadoop ecosystem that provides random real-time read/write access to data in the Hadoop File System
+
+#Why HBase:
+RDBMS get exponentially slow as the data becomes large
+Expects data to be highly structured, i.e. ability to fit in a well-defined schema
+Any change in schema might require a downtime
+For sparse datasets, too much of overhead of maintaining NULL values
+
+#Features of Hbase:
+Horizontally scalable: You can add any number of columns anytime.
+Automatic Failover: Automatic failover is a resource that allows a system administrator to automatically switch data handling to a standby system in the event of system compromise
+Integrations with Map/Reduce framework: Al the commands and java codes internally implement Map/ Reduce to do the task and it is built over Hadoop Distributed File System.
+sparse, distributed, persistent, multidimensional sorted map, which is indexed by rowkey, column key,and timestamp.
+Often referred as a key value store or column family-oriented database, or storing versioned maps of maps.
+fundamentally, it's a platform for storing and retrieving data with random access.
+It doesn't care about datatypes(storing an integer in one row and a string in another for the same column).
+It doesn't enforce relationships within your data.
+It is designed to run on a cluster of computers, built using commodity hardware
 
 #
